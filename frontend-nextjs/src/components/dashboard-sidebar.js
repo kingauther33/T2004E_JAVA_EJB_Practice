@@ -15,19 +15,47 @@ import { Users as UsersIcon } from "../icons/users";
 import { XCircle as XCircleIcon } from "../icons/x-circle";
 import { Logo } from "./logo";
 import { NavItem } from "./nav-item";
-import { XCircle } from "./../icons/x-circle";
-import { Menu } from "./../icons/menu";
 
 const items = [
   {
-    href: "/street",
-    icon: <Menu fontSize="small" />,
-    title: "Streets",
+    href: "/",
+    icon: <ChartBarIcon fontSize="small" />,
+    title: "Dashboard",
   },
   {
-    href: "/street/new",
+    href: "/customers",
     icon: <UsersIcon fontSize="small" />,
-    title: "Add new street",
+    title: "Customers",
+  },
+  {
+    href: "/products",
+    icon: <ShoppingBagIcon fontSize="small" />,
+    title: "Products",
+  },
+  {
+    href: "/account",
+    icon: <UserIcon fontSize="small" />,
+    title: "Account",
+  },
+  {
+    href: "/settings",
+    icon: <CogIcon fontSize="small" />,
+    title: "Settings",
+  },
+  {
+    href: "/login",
+    icon: <LockIcon fontSize="small" />,
+    title: "Login",
+  },
+  {
+    href: "/register",
+    icon: <UserAddIcon fontSize="small" />,
+    title: "Register",
+  },
+  {
+    href: "/404",
+    icon: <XCircleIcon fontSize="small" />,
+    title: "Error",
   },
 ];
 
@@ -64,7 +92,7 @@ export const DashboardSidebar = (props) => {
       >
         <div>
           <Box sx={{ p: 3 }}>
-            <NextLink href="/street" passHref>
+            <NextLink href="/" passHref>
               <a>
                 <Logo
                   sx={{
@@ -75,11 +103,41 @@ export const DashboardSidebar = (props) => {
               </a>
             </NextLink>
           </Box>
+          <Box sx={{ px: 2 }}>
+            <Box
+              sx={{
+                alignItems: "center",
+                backgroundColor: "rgba(255, 255, 255, 0.04)",
+                cursor: "pointer",
+                display: "flex",
+                justifyContent: "space-between",
+                px: 3,
+                py: "11px",
+                borderRadius: 1,
+              }}
+            >
+              <div>
+                <Typography color="inherit" variant="subtitle1">
+                  Acme Inc
+                </Typography>
+                <Typography color="neutral.400" variant="body2">
+                  Your tier : Premium
+                </Typography>
+              </div>
+              <SelectorIcon
+                sx={{
+                  color: "neutral.500",
+                  width: 14,
+                  height: 14,
+                }}
+              />
+            </Box>
+          </Box>
         </div>
         <Divider
           sx={{
             borderColor: "#2D3748",
-            mb: 3,
+            my: 3,
           }}
         />
         <Box sx={{ flexGrow: 1 }}>
