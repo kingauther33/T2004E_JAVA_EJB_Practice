@@ -9,8 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Setter
 @Getter
-public class Loan {
+public class LoanBeforeEndOfTenure {
     private double loan;
     private double rate;
-    private double tenure;
 }
